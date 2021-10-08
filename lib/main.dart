@@ -28,8 +28,19 @@ class MyApp extends StatelessWidget {
                   fontSize: 40.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'DancingScript',
                 ),
-              )
+              ),
+              Text(
+                'Student',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.tealAccent,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'SourceSansPro',
+                  letterSpacing: 2.5,
+                ),
+              ),
             ],
           ),
         ),
