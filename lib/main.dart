@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -9,10 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50.0,
@@ -26,7 +30,7 @@ class MyApp extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 40.0,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'DancingScript',
+                  fontFamily: 'Pacifico',
                 ),
               ),
               Text(
@@ -38,53 +42,46 @@ class MyApp extends StatelessWidget {
                   color: Colors.teal[100],
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.black,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      '+256 759 678566',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20,
+                width: 170,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.mail,
-                      color: Colors.black,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    '+256 759 678566',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20,
                     ),
-                    SizedBox(
-                      width: 10,
+                  ),
+                )
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    'katungiethan@gmail.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20,
                     ),
-                    Text(
-                      'katungiethan@gmail.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                )
               ),
             ],
           ),

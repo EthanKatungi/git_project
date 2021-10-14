@@ -29,7 +29,7 @@ flutter:
       fonts:
         - asset: fonts/DancingScript-Bold.ttf
 
-    - family: SourceSansPro
+    - family: Pacifico
       fonts:
-        - asset: fonts/SourceSansPro-LightItalic.ttf
+        - asset: fonts/Pacifico-Regular.ttf
 
